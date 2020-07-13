@@ -132,7 +132,7 @@ class AddVoiceMessageViewController: UIViewController {
     func prepareAudioSession() throws {
         let session = AVAudioSession.sharedInstance()
         try session.setCategory(.playAndRecord, options: [.defaultToSpeaker])
-        try session.setActive(true, options: []) // can fail if on a phone call, for instance
+        try session.setActive(true, options: [])
     }
     
     func play() {
@@ -165,7 +165,7 @@ class AddVoiceMessageViewController: UIViewController {
         let name = ISO8601DateFormatter.string(from: Date(), timeZone: .current, formatOptions: .withInternetDateTime)
         let file = documents.appendingPathComponent(name, isDirectory: false).appendingPathExtension("caf")
         
-        //        print("recording URL: \(file)")
+        print("recording URL: \(file)")
         
         return file
     }
@@ -180,7 +180,6 @@ class AddVoiceMessageViewController: UIViewController {
                 }
                 
                 print("Recording permission has been granted!")
-                // NOTE: Invite the user to tap record again, since we just interrupted them, and they may not have been ready to record
             }
         case .denied:
             print("Microphone access has been blocked.")
@@ -274,7 +273,6 @@ extension AddVoiceMessageViewController: AVAudioPlayerDelegate {
     }
     
 }
-
 
 extension AddVoiceMessageViewController: AVAudioRecorderDelegate {
     
