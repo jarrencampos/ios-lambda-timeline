@@ -29,6 +29,7 @@
 		46D571F32172D43B00E7FF73 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D571F22172D43B00E7FF73 /* Cache.swift */; };
 		46D571F52173CF3E00E7FF73 /* UIImage+Ratio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D571F42173CF3E00E7FF73 /* UIImage+Ratio.swift */; };
 		46D571F82173FC2700E7FF73 /* ImagePostDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D571F72173FC2700E7FF73 /* ImagePostDetailTableViewController.swift */; };
+		C3241B0124BC1BE500E2C6A6 /* AddVoiceMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3241B0024BC1BE500E2C6A6 /* AddVoiceMessageViewController.swift */; };
 		C38EB05A24BAB79A009CA265 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C38EB05924BAB79A009CA265 /* GoogleService-Info.plist */; };
 		C38EB05C24BAC539009CA265 /* EditPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38EB05B24BAC539009CA265 /* EditPhotoViewController.swift */; };
 		C3A801C024BBE370008A99D3 /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A801BF24BBE370008A99D3 /* UIImage+Scaling.swift */; };
@@ -63,6 +64,7 @@
 		46D571F72173FC2700E7FF73 /* ImagePostDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePostDetailTableViewController.swift; sourceTree = "<group>"; };
 		5D2CCD6C68779B0A70AC37FA /* Pods-LambdaTimeline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LambdaTimeline.release.xcconfig"; path = "Pods/Target Support Files/Pods-LambdaTimeline/Pods-LambdaTimeline.release.xcconfig"; sourceTree = "<group>"; };
 		AA39CACB677861CF84322FB5 /* Pods_LambdaTimeline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LambdaTimeline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3241B0024BC1BE500E2C6A6 /* AddVoiceMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVoiceMessageViewController.swift; sourceTree = "<group>"; };
 		C38EB05924BAB79A009CA265 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C38EB05B24BAC539009CA265 /* EditPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoViewController.swift; sourceTree = "<group>"; };
 		C3A801BF24BBE370008A99D3 /* UIImage+Scaling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Scaling.swift"; sourceTree = "<group>"; };
@@ -167,7 +169,7 @@
 				46CFE6F421707D0000E7FF73 /* ImagePostViewController.swift */,
 				46D571F72173FC2700E7FF73 /* ImagePostDetailTableViewController.swift */,
 				C38EB05B24BAC539009CA265 /* EditPhotoViewController.swift */,
-				C3A801BF24BBE370008A99D3 /* UIImage+Scaling.swift */,
+				C3241B0024BC1BE500E2C6A6 /* AddVoiceMessageViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -195,6 +197,7 @@
 				46CFE7052171573200E7FF73 /* Operations */,
 				46D571F62173D6D200E7FF73 /* Extensions */,
 				46D571F22172D43B00E7FF73 /* Cache.swift */,
+				C3A801BF24BBE370008A99D3 /* UIImage+Scaling.swift */,
 				464637982170048900E7FF73 /* FirebaseConvertible.swift */,
 				46CFE6FC217154F500E7FF73 /* Networking.swift */,
 				46CFE6F82170862C00E7FF73 /* ShiftableViewController.swift */,
@@ -360,6 +363,7 @@
 				46CFE6F92170862C00E7FF73 /* ShiftableViewController.swift in Sources */,
 				4646377C216FDE4B00E7FF73 /* AppDelegate.swift in Sources */,
 				46CFE6FD217154F500E7FF73 /* Networking.swift in Sources */,
+				C3241B0124BC1BE500E2C6A6 /* AddVoiceMessageViewController.swift in Sources */,
 				46CFE6F521707D0000E7FF73 /* ImagePostViewController.swift in Sources */,
 				C3A801C024BBE370008A99D3 /* UIImage+Scaling.swift in Sources */,
 				46CFE6FF2171556D00E7FF73 /* ConcurrentOperation.swift in Sources */,

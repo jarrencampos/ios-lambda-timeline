@@ -31,6 +31,8 @@ class ImagePostDetailTableViewController: UITableViewController {
         authorLabel.text = post.author.displayName
     }
     
+    @IBAction func unwindToDetail(_ sender: UIStoryboardSegue) {}
+    
     // MARK: - Table view data source
     
     @IBAction func createComment(_ sender: Any) {
@@ -55,9 +57,14 @@ class ImagePostDetailTableViewController: UITableViewController {
             }
         }
         
+        let addVoiceAction = UIAlertAction(title: "Add Voice Message", style: .default) { (_) in
+            self.performSegue(withIdentifier: "addVoiceComment", sender: nil)
+        }
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
         alert.addAction(addCommentAction)
+        alert.addAction(addVoiceAction)
         alert.addAction(cancelAction)
         
         present(alert, animated: true, completion: nil)
@@ -88,5 +95,7 @@ class ImagePostDetailTableViewController: UITableViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var imageViewAspectRatioConstraint: NSLayoutConstraint!
+    
+    
     
 }
