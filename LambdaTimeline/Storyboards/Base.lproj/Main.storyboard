@@ -531,6 +531,9 @@
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0DM-sN-Siu">
                                         <rect key="frame" x="64" y="0.0" width="246" height="31"/>
+                                        <connections>
+                                            <action selector="updateCurrentTime:" destination="axH-cU-dby" eventType="valueChanged" id="gNP-Pp-tSg"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySt-lv-320">
                                         <rect key="frame" x="328" y="0.0" width="46" height="30"/>
@@ -550,6 +553,9 @@
                                 <state key="normal" title="Button" image="mic.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
+                                <connections>
+                                    <action selector="toggleRecording:" destination="axH-cU-dby" eventType="touchUpInside" id="Mjd-YA-ZgA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ydg-VO-x5X">
                                 <rect key="frame" x="100" y="788" width="50" height="50"/>
@@ -559,6 +565,9 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="play.fill" catalog="system"/>
                                 <state key="selected" image="pause.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="togglePlayback:" destination="axH-cU-dby" eventType="touchUpInside" id="6ny-W3-Wol"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -585,6 +594,13 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="playButton" destination="Ydg-VO-x5X" id="6qg-mh-vVP"/>
+                        <outlet property="recordButton" destination="udJ-It-R2m" id="E6K-1q-04j"/>
+                        <outlet property="timeElapsedLabel" destination="y3X-Le-Vsm" id="F5B-6k-sQI"/>
+                        <outlet property="timeRemainingLabel" destination="ySt-lv-320" id="juf-YB-khm"/>
+                        <outlet property="timeSlider" destination="0DM-sN-Siu" id="jce-zA-tdF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Igx-Vc-5qJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ZBs-It-HGr" userLabel="Exit" sceneMemberID="exit"/>
