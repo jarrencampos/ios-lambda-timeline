@@ -12,6 +12,7 @@ import AVKit
 
 class CameraViewController: UIViewController {
     
+    lazy var currentVideoURL = URL(fileURLWithPath: "")
     lazy private var captureSession = AVCaptureSession()
     lazy private var fileOutput = AVCaptureMovieFileOutput()
     
@@ -49,6 +50,9 @@ class CameraViewController: UIViewController {
             playerView.addGestureRecognizer(tapGesture)
         }
         player.play()
+    }
+    @IBAction func addVideoCaptureToPost(_ sender: Any) {
+        
     }
     
     @IBAction func playRecording(_ sender: UITapGestureRecognizer) {
@@ -153,11 +157,20 @@ class CameraViewController: UIViewController {
         
         let name = formatter.string(from: Date())
         let fileURL = documentsDirectory.appendingPathComponent(name).appendingPathExtension("mov")
+        currentVideoURL = fileURL
         return fileURL
     }
     
     func updateViews() {
         recordButton.isSelected = fileOutput.isRecording
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destVC = segue.destination as! VideoPostViewController
+        #warning("need to implement")
+        destVC.captureVideoButton.alpha = 0
+        destVC.retakeVideoButton.alpha = 1
+        destVC.currentURL = currentVideoURL
     }
 }
 

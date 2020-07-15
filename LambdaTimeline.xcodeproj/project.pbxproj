@@ -247,9 +247,9 @@
 		C3441BF324BE986900D27AC5 /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				C3441BF824BE9C6200D27AC5 /* VideoPostViewController.swift */,
 				C3441BF424BE98B000D27AC5 /* CameraViewController.swift */,
 				C3441BF624BE991E00D27AC5 /* VideoPlayerView.swift */,
-				C3441BF824BE9C6200D27AC5 /* VideoPostViewController.swift */,
 			);
 			path = Video;
 			sourceTree = "<group>";

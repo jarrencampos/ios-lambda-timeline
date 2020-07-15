@@ -130,29 +130,39 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="GCQ-Hs-8PW" firstAttribute="centerY" secondItem="fwJ-tX-mWh" secondAttribute="centerY" id="B93-Sc-boJ"/>
                                     <constraint firstItem="GCQ-Hs-8PW" firstAttribute="centerX" secondItem="fwJ-tX-mWh" secondAttribute="centerX" id="DCb-k0-s5o"/>
                                     <constraint firstItem="GCQ-Hs-8PW" firstAttribute="height" secondItem="fwJ-tX-mWh" secondAttribute="height" id="Esm-Zv-baz"/>
+                                    <constraint firstAttribute="width" constant="414" id="Koa-4E-XWP"/>
                                     <constraint firstAttribute="width" secondItem="fwJ-tX-mWh" secondAttribute="height" multiplier="1:1" id="TGr-e9-NI0"/>
+                                    <constraint firstAttribute="height" constant="414" id="gCn-Bk-huI"/>
                                     <constraint firstItem="GCQ-Hs-8PW" firstAttribute="width" secondItem="fwJ-tX-mWh" secondAttribute="width" id="lXa-Rm-1Mv"/>
-                                    <constraint firstItem="GCQ-Hs-8PW" firstAttribute="width" secondItem="fwJ-tX-mWh" secondAttribute="height" multiplier="1:1" id="qBS-2Y-DFS"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Give your post a titile..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZXQ-ZJ-1kZ">
-                                <rect key="frame" x="0.0" y="502" width="414" height="34"/>
+                                <rect key="frame" x="0.0" y="552" width="414" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcx-nz-Q5U">
+                                <rect key="frame" x="0.0" y="512" width="414" height="30"/>
+                                <state key="normal" title="Retake Video"/>
+                                <connections>
+                                    <action selector="retakeVideoPressed:" destination="dhl-De-JHZ" eventType="touchUpInside" id="4ZW-UT-BDb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ZXQ-ZJ-1kZ" firstAttribute="leading" secondItem="xxl-Vp-2Fc" secondAttribute="leading" id="663-W5-35O"/>
+                            <constraint firstItem="Zcx-nz-Q5U" firstAttribute="leading" secondItem="xxl-Vp-2Fc" secondAttribute="leading" id="6cB-Bz-Vkl"/>
                             <constraint firstItem="xxl-Vp-2Fc" firstAttribute="trailing" secondItem="ZXQ-ZJ-1kZ" secondAttribute="trailing" id="7Oc-t5-ZYd"/>
                             <constraint firstItem="fwJ-tX-mWh" firstAttribute="top" secondItem="xxl-Vp-2Fc" secondAttribute="top" id="Gjy-3a-WNf"/>
+                            <constraint firstItem="ZXQ-ZJ-1kZ" firstAttribute="top" secondItem="Zcx-nz-Q5U" secondAttribute="bottom" constant="10" id="RfK-kk-RBn"/>
+                            <constraint firstItem="xxl-Vp-2Fc" firstAttribute="trailing" secondItem="Zcx-nz-Q5U" secondAttribute="trailing" id="W5F-zA-cvg"/>
                             <constraint firstItem="fwJ-tX-mWh" firstAttribute="leading" secondItem="xxl-Vp-2Fc" secondAttribute="leading" id="X1b-je-BaY"/>
-                            <constraint firstItem="ZXQ-ZJ-1kZ" firstAttribute="top" secondItem="fwJ-tX-mWh" secondAttribute="bottom" id="t2B-Uc-Wo6"/>
+                            <constraint firstItem="Zcx-nz-Q5U" firstAttribute="top" secondItem="fwJ-tX-mWh" secondAttribute="bottom" constant="10" id="cz8-cW-DwZ"/>
                             <constraint firstItem="xxl-Vp-2Fc" firstAttribute="trailing" secondItem="fwJ-tX-mWh" secondAttribute="trailing" id="ttW-al-5pL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xxl-Vp-2Fc"/>
@@ -167,6 +177,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="captureVideoButton" destination="GCQ-Hs-8PW" id="VWV-j9-1Cb"/>
+                        <outlet property="retakeVideoButton" destination="Zcx-nz-Q5U" id="X6G-HB-a6o"/>
+                        <outlet property="videoView" destination="fwJ-tX-mWh" id="caa-wt-WKk"/>
                         <segue destination="Ctk-8p-Ajw" kind="show" identifier="ToRecordVideo" id="bOL-6L-vB2"/>
                     </connections>
                 </viewController>
@@ -194,6 +207,9 @@
                                         <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button" image="Record"/>
                                         <state key="selected" image="Stop"/>
+                                        <connections>
+                                            <action selector="recordButtonPressed:" destination="Ctk-8p-Ajw" eventType="touchUpInside" id="4TQ-N1-YHm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -218,6 +234,10 @@
                                 <rect key="frame" x="322" y="11" width="72" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="addVideoCaptureToPost:" destination="Ctk-8p-Ajw" eventType="touchUpInside" id="09g-xy-uIM"/>
+                                    <segue destination="2Uj-CI-aIN" kind="unwind" unwindAction="unwindToVideoPostVC:" id="lsd-6A-NBz"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -227,6 +247,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wit-yt-KXI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="2Uj-CI-aIN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2737.68115942029" y="-902.00892857142856"/>
         </scene>
