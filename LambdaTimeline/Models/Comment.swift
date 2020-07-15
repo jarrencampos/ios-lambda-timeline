@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseAuth
 
+#warning("Need to edit to save an audio file here")
 class Comment: FirebaseConvertible, Equatable {
     
     static private let textKey = "text"

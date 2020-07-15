@@ -31,6 +31,10 @@
 		46D571F82173FC2700E7FF73 /* ImagePostDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D571F72173FC2700E7FF73 /* ImagePostDetailTableViewController.swift */; };
 		C3241B0124BC1BE500E2C6A6 /* AddVoiceMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3241B0024BC1BE500E2C6A6 /* AddVoiceMessageViewController.swift */; };
 		C3241B0324BC27D800E2C6A6 /* CellCommentPostDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3241B0224BC27D800E2C6A6 /* CellCommentPostDetailTableViewCell.swift */; };
+		C3441BF124BE971400D27AC5 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3441BF024BE971400D27AC5 /* CameraPreviewView.swift */; };
+		C3441BF524BE98B000D27AC5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3441BF424BE98B000D27AC5 /* CameraViewController.swift */; };
+		C3441BF724BE991E00D27AC5 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3441BF624BE991E00D27AC5 /* VideoPlayerView.swift */; };
+		C3441BF924BE9C6200D27AC5 /* VideoPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3441BF824BE9C6200D27AC5 /* VideoPostViewController.swift */; };
 		C38EB05A24BAB79A009CA265 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C38EB05924BAB79A009CA265 /* GoogleService-Info.plist */; };
 		C38EB05C24BAC539009CA265 /* EditPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38EB05B24BAC539009CA265 /* EditPhotoViewController.swift */; };
 		C3A801C024BBE370008A99D3 /* UIImage+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A801BF24BBE370008A99D3 /* UIImage+Scaling.swift */; };
@@ -67,6 +71,10 @@
 		AA39CACB677861CF84322FB5 /* Pods_LambdaTimeline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LambdaTimeline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3241B0024BC1BE500E2C6A6 /* AddVoiceMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVoiceMessageViewController.swift; sourceTree = "<group>"; };
 		C3241B0224BC27D800E2C6A6 /* CellCommentPostDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellCommentPostDetailTableViewCell.swift; sourceTree = "<group>"; };
+		C3441BF024BE971400D27AC5 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
+		C3441BF424BE98B000D27AC5 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		C3441BF624BE991E00D27AC5 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		C3441BF824BE9C6200D27AC5 /* VideoPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPostViewController.swift; sourceTree = "<group>"; };
 		C38EB05924BAB79A009CA265 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C38EB05B24BAC539009CA265 /* EditPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoViewController.swift; sourceTree = "<group>"; };
 		C3A801BF24BBE370008A99D3 /* UIImage+Scaling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Scaling.swift"; sourceTree = "<group>"; };
@@ -168,11 +176,10 @@
 			children = (
 				46A0366C2170158900E7FF73 /* SignInViewController.swift */,
 				46A0366921700F5100E7FF73 /* PostsCollectionViewController.swift */,
-				46CFE6F421707D0000E7FF73 /* ImagePostViewController.swift */,
 				46D571F72173FC2700E7FF73 /* ImagePostDetailTableViewController.swift */,
-				C3241B0224BC27D800E2C6A6 /* CellCommentPostDetailTableViewCell.swift */,
-				C38EB05B24BAC539009CA265 /* EditPhotoViewController.swift */,
 				C3241B0024BC1BE500E2C6A6 /* AddVoiceMessageViewController.swift */,
+				C3441BF224BE97FF00D27AC5 /* Images */,
+				C3441BF324BE986900D27AC5 /* Video */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -181,6 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				46CFE7022171572600E7FF73 /* ImagePostCollectionViewCell.swift */,
+				C3241B0224BC27D800E2C6A6 /* CellCommentPostDetailTableViewCell.swift */,
+				C3441BF024BE971400D27AC5 /* CameraPreviewView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,6 +233,25 @@
 				AA39CACB677861CF84322FB5 /* Pods_LambdaTimeline.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3441BF224BE97FF00D27AC5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				46CFE6F421707D0000E7FF73 /* ImagePostViewController.swift */,
+				C38EB05B24BAC539009CA265 /* EditPhotoViewController.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		C3441BF324BE986900D27AC5 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				C3441BF424BE98B000D27AC5 /* CameraViewController.swift */,
+				C3441BF624BE991E00D27AC5 /* VideoPlayerView.swift */,
+				C3441BF824BE9C6200D27AC5 /* VideoPostViewController.swift */,
+			);
+			path = Video;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,14 +396,18 @@
 				46CFE6FD217154F500E7FF73 /* Networking.swift in Sources */,
 				C3241B0124BC1BE500E2C6A6 /* AddVoiceMessageViewController.swift in Sources */,
 				46CFE6F521707D0000E7FF73 /* ImagePostViewController.swift in Sources */,
+				C3441BF924BE9C6200D27AC5 /* VideoPostViewController.swift in Sources */,
 				C3A801C024BBE370008A99D3 /* UIImage+Scaling.swift in Sources */,
+				C3441BF124BE971400D27AC5 /* CameraPreviewView.swift in Sources */,
 				46CFE6FF2171556D00E7FF73 /* ConcurrentOperation.swift in Sources */,
 				46463790216FFD1B00E7FF73 /* Post.swift in Sources */,
+				C3441BF724BE991E00D27AC5 /* VideoPlayerView.swift in Sources */,
 				46CFE6F32170757F00E7FF73 /* User+DictionaryRepresentation.swift in Sources */,
 				46D571F32172D43B00E7FF73 /* Cache.swift in Sources */,
 				46CFE7012171559500E7FF73 /* FetchMediaOperation.swift in Sources */,
 				C38EB05C24BAC539009CA265 /* EditPhotoViewController.swift in Sources */,
 				46D571F82173FC2700E7FF73 /* ImagePostDetailTableViewController.swift in Sources */,
+				C3441BF524BE98B000D27AC5 /* CameraViewController.swift in Sources */,
 				46CFE7032171572600E7FF73 /* ImagePostCollectionViewCell.swift in Sources */,
 				4646379C2170091A00E7FF73 /* PostController.swift in Sources */,
 				464637992170048900E7FF73 /* FirebaseConvertible.swift in Sources */,
